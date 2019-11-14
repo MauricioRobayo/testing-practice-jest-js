@@ -4,6 +4,7 @@ const {
   reverse,
   calculator,
   caesar,
+  analyze,
 } = require('./functions');
 
 it('should capitalize a string', () => {
@@ -46,4 +47,13 @@ it('should encode correctly a string', () => {
     .toBe('Efgfoe uif Fbtu xbmm pg uif Dbtumf 2');
   expect(caesar('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper dui ut ante tempor, tristique sodales massa molestie.', 7))
     .toBe('Svylt pwzbt kvsvy zpa htla, jvuzljalaby hkpwpzjpun lspa. Zbzwlukpzzl bsshtjvywly kbp ba hual altwvy, aypzapxbl zvkhslz thzzh tvslzapl.');
+});
+
+it('should analyze array', () => {
+  expect(analyze([1, 8, 3, 4, 2, 6]))
+    .toEqual({ average: 4, min: 1, max: 8, length: 6 });
+  expect(analyze([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]))
+    .toEqual({ average: 6, min: 1, max: 11, length: 11 });
+  expect(analyze([]))
+    .toEqual({ average: NaN, min: undefined, max: undefined, length: 0 });
 });

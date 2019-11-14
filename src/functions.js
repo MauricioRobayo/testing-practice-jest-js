@@ -29,4 +29,13 @@ module.exports = {
       .map((ch) => lowerCipher(upperCipher(ch)))
       .join('');
   },
+
+  analyze(array) {
+    return {
+      average: array.reduce((a, b) => a + b, 0) / array.length,
+      min: array.length ? Math.min(...array) : undefined,
+      max: array.length ? Math.max(...array) : undefined,
+      length: array.length,
+    };
+  },
 };
