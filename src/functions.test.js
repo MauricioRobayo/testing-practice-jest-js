@@ -1,4 +1,10 @@
-const { capitalize, reverse, calculator } = require('./functions');
+/* eslint-disable object-curly-newline */
+const {
+  capitalize,
+  reverse,
+  calculator,
+  caesar,
+} = require('./functions');
 
 it('should capitalize a string', () => {
   expect(capitalize('hello, world!')).toBe('Hello, world!');
@@ -33,4 +39,11 @@ it('should divide two numbers', () => {
   expect(calculator.divide('2', '1')).toBe(2);
   expect(calculator.divide(1, 0)).toBe(Infinity);
   expect(calculator.divide(0, 0)).toBe(NaN);
+});
+
+it('should encode correctly a string', () => {
+  expect(caesar('Defend the East wall of the Castle 2', 1))
+    .toBe('Efgfoe uif Fbtu xbmm pg uif Dbtumf 2');
+  expect(caesar('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper dui ut ante tempor, tristique sodales massa molestie.', 7))
+    .toBe('Svylt pwzbt kvsvy zpa htla, jvuzljalaby hkpwpzjpun lspa. Zbzwlukpzzl bsshtjvywly kbp ba hual altwvy, aypzapxbl zvkhslz thzzh tvslzapl.');
 });
