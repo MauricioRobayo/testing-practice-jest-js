@@ -26,7 +26,7 @@ module.exports = {
 
     return message
       .split('')
-      .map((ch) => lowerCipher(upperCipher(ch)))
+      .map(ch => lowerCipher(upperCipher(ch)))
       .join('');
   },
 
