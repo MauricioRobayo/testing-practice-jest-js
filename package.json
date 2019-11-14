@@ -1,0 +1,24 @@
+{
+  "name": "testing-practice-jest-js",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MauricioRobayo/testing-practice-jest-js.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MauricioRobayo/testing-practice-jest-js/issues"
+  },
+  "homepage": "https://github.com/MauricioRobayo/testing-practice-jest-js#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.9.0"
+  }
+}
